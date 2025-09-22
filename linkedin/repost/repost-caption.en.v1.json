@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RepostCaptionEN",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "repost_text": { "type": "string", "minLength": 140, "maxLength": 300 }
+  },
+  "required": ["repost_text"]
+}
