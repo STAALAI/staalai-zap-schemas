@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ArticleInsightsEN",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "article_summary": { "type": "string", "minLength": 80, "maxLength": 180 },
+    "key_points": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 120 },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "project_sector": { "type": "string", "maxLength": 40 },
+    "platform_sector": { "type": "string", "maxLength": 40 },
+    "audience_project": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 40 },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "audience_core": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 40 },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "hooks": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 140 },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "angle_options": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 40 },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "pull_quote": { "type": "string", "maxLength": 140 },
+    "cta_soft": { "type": "string", "maxLength": 120 },
+    "suggested_hashtags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^#[A-Za-z0-9_]{2,30}$" },
+      "minItems": 3,
+      "maxItems": 6
+    },
+    "tone_hints": { "type": "string", "maxLength": 160 }
+  },
+  "required": ["article_summary", "key_points", "hooks", "cta_soft", "suggested_hashtags", "tone_hints"]
+}
