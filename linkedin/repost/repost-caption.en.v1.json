@@ -4,7 +4,13 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "repost_text": { "type": "string", "minLength": 140, "maxLength": 300 }
+    "repost_text": { "type": "string", "minLength": 140, "maxLength": 300 },
+    "hashtags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^#[A-Za-z0-9_]{2,30}$" },
+      "minItems": 2,
+      "maxItems": 5
+    }
   },
   "required": ["repost_text"]
 }
