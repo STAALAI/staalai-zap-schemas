@@ -44,8 +44,19 @@
       "items": { "type": "string", "pattern": "^#[A-Za-z0-9_]{2,30}$" },
       "minItems": 3,
       "maxItems": 6
-    },
-    "tone_hints": { "type": "string", "maxLength": 160 }
+    }
   },
-  "required": ["article_summary", "key_points", "hooks", "cta_soft", "suggested_hashtags", "tone_hints"]
+  "required": [
+    "article_summary",
+    "key_points",
+    "project_sector",
+    "platform_sector",
+    "audience_project",
+    "audience_core",
+    "hooks",
+    "angle_options",
+    "pull_quote",
+    "cta_soft",
+    "suggested_hashtags"
+  ]
 }
