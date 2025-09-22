@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ArticleOutput",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string", "maxLength": 120 },
+    "subtitle": { "type": "string", "maxLength": 200 },
+    "introduction": { "type": "string", "minLength": 200, "maxLength": 600 },
+    "body": { "type": "string", "minLength": 400, "maxLength": 600 },
+    "conclusion": { "type": "string", "minLength": 100, "maxLength": 200 },
+    "hashtags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 3,
+      "maxItems": 10
+    }
+  },
+  "required": ["title", "subtitle", "introduction", "body", "conclusion", "hashtags"]
+}
