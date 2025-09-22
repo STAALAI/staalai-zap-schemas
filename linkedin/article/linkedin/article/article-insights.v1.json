@@ -15,13 +15,13 @@
     "platform_sector": { "type": "string", "maxLength": 40 },
     "audience_project": {
       "type": "array",
-      "items": { "type": "string", "maxLength": 40 },
+      "items": { "type": "string", "pattern": "^[^\",]{2,40}$" },
       "minItems": 1,
       "maxItems": 2
     },
     "audience_core": {
       "type": "array",
-      "items": { "type": "string", "maxLength": 40 },
+      "items": { "type": "string", "pattern": "^[^\",]{2,40}$" },
       "minItems": 1,
       "maxItems": 2
     },
