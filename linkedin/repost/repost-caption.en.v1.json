@@ -1,16 +1,47 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "RepostCaptionEN",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RepostCaptionsEN",
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "repost_text": { "type": "string", "minLength": 140, "maxLength": 300 },
-    "hashtags": {
-      "type": "array",
-      "items": { "type": "string", "pattern": "^#[A-Za-z0-9_]{2,30}$" },
-      "minItems": 2,
-      "maxItems": 5
+    "personal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repost_text": {
+          "type": "string",
+          "minLength": 160,
+          "maxLength": 320,
+          "pattern": "^[\\s\\S]*[\\.?]$"
+        },
+        "hashtags": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^#[A-Za-z0-9_]{2,30}$" },
+          "minItems": 2,
+          "maxItems": 5
+        }
+      },
+      "required": ["repost_text", "hashtags"]
+    },
+    "company": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repost_text": {
+          "type": "string",
+          "minLength": 160,
+          "maxLength": 320,
+          "pattern": "^[\\s\\S]*[\\.?]$"
+        },
+        "hashtags": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^#[A-Za-z0-9_]{2,30}$" },
+          "minItems": 2,
+          "maxItems": 5
+        }
+      },
+      "required": ["repost_text", "hashtags"]
     }
   },
-  "required": ["repost_text"]
+  "required": ["personal", "company"]
 }
