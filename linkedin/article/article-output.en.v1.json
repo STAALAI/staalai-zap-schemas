@@ -13,18 +13,18 @@
     },
     "introduction": {
       "type": "string",
-      "minLength": 1200,
-      "maxLength": 2400
+      "minLength": 800,
+      "maxLength": 1600
     },
     "body": {
       "type": "string",
-      "minLength": 2000,
-      "maxLength": 3600
+      "minLength": 1400,
+      "maxLength": 2400
     },
     "conclusion": {
       "type": "string",
-      "minLength": 600,
-      "maxLength": 1200
+      "minLength": 400,
+      "maxLength": 800
     },
     "hashtags": {
       "type": "array",
